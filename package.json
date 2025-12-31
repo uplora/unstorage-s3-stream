@@ -25,6 +25,7 @@
     "build": "unbuild",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "test:deps": "madge --circular --extensions ts ./src",
     "typecheck": "tsc --noEmit --skipLibCheck",
     "prepare": "husky"
   },
