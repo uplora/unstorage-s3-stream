@@ -1,0 +1,57 @@
+{
+  "name": "@uplora/unstorage-s3-stream",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.11.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uplora/unstorage-s3-stream.git"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "release": "pnpm build && changelogen --release --push && pnpm publish --access public",
+    "build": "unbuild",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit --skipLibCheck",
+    "prepare": "husky"
+  },
+  "peerDependencies": {
+    "unstorage": "^1.16.0 || ^2.0.0-alpha.4"
+  },
+  "dependencies": {
+    "minio": "^8.0.5"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.13.2",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "changelogen": "^0.6.1",
+    "eslint": "^9.28.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "madge": "^8.0.0",
+    "typescript": "^5.8.2",
+    "unbuild": "^3.5.0"
+  },
+  "lint-staged": {
+    "*.ts": "pnpm run lint"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
