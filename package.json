@@ -2,7 +2,7 @@
   "name": "@uplora/unstorage-s3-stream",
   "type": "module",
   "version": "0.1.0",
-  "packageManager": "pnpm@10.11.1",
+  "packageManager": "pnpm@10.27.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uplora/unstorage-s3-stream.git"
@@ -33,19 +33,19 @@
     "unstorage": "^1.16.0 || ^2.0.0-alpha.4"
   },
   "dependencies": {
-    "minio": "^8.0.5"
+    "minio": "^8.0.6"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.13.2",
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0",
-    "changelogen": "^0.6.1",
-    "eslint": "^9.28.0",
+    "@antfu/eslint-config": "^4.19.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "changelogen": "^0.6.2",
+    "eslint": "^9.39.2",
     "husky": "^9.1.7",
-    "lint-staged": "^16.0.0",
+    "lint-staged": "^16.2.7",
     "madge": "^8.0.0",
-    "typescript": "^5.8.2",
-    "unbuild": "^3.5.0"
+    "typescript": "^5.9.3",
+    "unbuild": "^3.6.1"
   },
   "lint-staged": {
     "*.ts": "pnpm run lint"
